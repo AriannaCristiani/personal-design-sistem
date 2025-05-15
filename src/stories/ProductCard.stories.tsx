@@ -2,7 +2,8 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { ProductCard } from "../components/ProductCard/ProductCard";
 import type { ProductCardProps } from "../components/ProductCard/ProductCard";
 import { action } from "@storybook/addon-actions";
-import sampleImage from "../assets/coffee.png";
+import greenCoffee from "../assets/coffee.png";
+import arabicaCoffee from "../assets/coffee2.png";
 
 const meta: Meta<typeof ProductCard> = {
   title: "Components/ProductCard",
@@ -32,8 +33,8 @@ export const Default: Story = {
     price: "€12.90",
     discount: "-10%",
     soldOut: false,
-    image: sampleImage,
-    onAddToCart: () => alert("✅ Prodotto aggiunto al carrello!"),
+    image: greenCoffee,
+    onAddToCart: () => alert("✅ Hai cliccato sul Bottone!"),
   },
 };
 
@@ -42,7 +43,7 @@ export const SoldOut: Story = {
     title: "Arabica Coffee Blend",
     price: "€15.00",
     soldOut: true,
-    image: sampleImage,
+    image: arabicaCoffee,
     onAddToCart: action("add-to-cart clicked"),
   },
 };

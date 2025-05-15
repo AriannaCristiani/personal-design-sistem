@@ -10,11 +10,11 @@ const meta: Meta<typeof GreenButton> = {
     label: { control: "text" },
     disabled: { control: "boolean" },
     ariaLabel: { control: "text" },
-  },
-   size: {
+    size: {
       control: { type: "radio" },
       options: ["small", "medium", "large"],
     },
+  },
   parameters: {
     docs: {
       description: {
@@ -30,23 +30,23 @@ type Story = StoryObj<GreenButtonProps>;
 
 export const Default: Story = {
   args: {
-    label: "Aggiungi al carrello",
-    ariaLabel: "Aggiungi al carrello",
+    label: "Button",
+    ariaLabel: "Button",
     onClick: () => alert("✅ Hai cliccato il bottone!")
   },
 };
 
 export const Disabled: Story = {
   args: {
-    label: "Non disponibile",
-    ariaLabel: "Non disponibile",
+    label: "Disabled",
+    ariaLabel: "Disabled",
     disabled: true,
   },
 };
 
 export const Small: Story = {
   args: {
-    label: "Aggiungi al carrello",
+    label: "Button",
     size: "small",
     onClick: () => alert("✅ Hai cliccato il bottone!"),
   },
@@ -54,7 +54,7 @@ export const Small: Story = {
 
 export const Medium: Story = {
   args: {
-    label: "Aggiungi al carrello",
+    label: "Button",
     size: "medium",
     onClick: () => alert("✅ Hai cliccato il bottone!"),
   },
@@ -62,7 +62,7 @@ export const Medium: Story = {
 
 export const Large: Story = {
   args: {
-    label: "Aggiungi al carrello",
+    label: "Button",
     size: "large",
     onClick: () => alert("✅ Hai cliccato il bottone!"),
   },

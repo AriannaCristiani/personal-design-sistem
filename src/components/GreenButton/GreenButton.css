@@ -1,5 +1,6 @@
 .green-button {
   font-family: var(--font-family);
+  letter-spacing: 0.5px;
   border: none;
   border-radius: var(--radius);
   cursor: pointer;
@@ -11,16 +12,22 @@
 
 /* Dimensioni */
 .green-button--small {
+  font-family: var(--font-family);
+  letter-spacing: 1.2px;
   font-size: 0.8rem;
   padding: 6px 12px;
 }
 
 .green-button--medium {
+  font-family: var(--font-family);
+  letter-spacing: 1px;
   font-size: 1rem;
   padding: 10px 20px;
 }
 
 .green-button--large {
+  font-family: var(--font-family);
+  letter-spacing: 1px;
   font-size: 1.2rem;
   padding: 14px 28px;
 }

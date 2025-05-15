@@ -3,6 +3,7 @@
   border-radius: 15px;
   box-shadow: var(--shadow);
   font-family: var(--font-family);
+  letter-spacing: 0.2px;
   overflow: hidden;
   width: 250px;
   transition: transform 0.2s ease;
@@ -32,7 +33,7 @@
   background-color: var(--green);
   color: white;
   padding: 4px 8px;
-  border-radius: 8px;
+  border-radius: var(--radius); 
   font-size: 0.8rem;
 }
 
@@ -43,24 +44,29 @@
   background-color: var(--brown);
   color: white;
   padding: 4px 8px;
-  border-radius: 8px;
+  border-radius: var(--radius); 
   font-size: 0.8rem;
 }
 
 .content {
-  padding: 12px;
+  padding: 16px;
 }
 
 .content h3 {
   margin: 0 0 8px;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: var(--text-dark);
 }
 
 .price {
-  margin: 0 0 12px;
+  margin: 0 0 16px;
   color: var(--green);
   font-weight: bold;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: flex-end;
 }
 
 @media (max-width: 480px) {

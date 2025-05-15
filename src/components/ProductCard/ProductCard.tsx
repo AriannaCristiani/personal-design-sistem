@@ -21,13 +21,15 @@ export function ProductCard({ title, price, image, discount, soldOut, onAddToCar
       <div className="content">
         <h3>{title}</h3>
         <p className="price">{price}</p>
+        <div className="button-wrapper">
         <GreenButton
-          label={soldOut ? "Sold out" : "Add to cart"}
+          label={soldOut ? "Unavailable" : "Add to cart"}
           disabled={soldOut}
           size="small"
           ariaLabel={`Pulsante ${soldOut ? "non disponibile" : "aggiungi al carrello"} per ${title}`}
           onClick={onAddToCart}
         />
+        </div>
       </div>
     </article>
   );
