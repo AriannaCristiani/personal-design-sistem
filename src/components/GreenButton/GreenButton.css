@@ -1,0 +1,41 @@
+.green-button {
+  font-family: var(--font-family);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  box-shadow: var(--shadow);
+  color: white;
+  background-color: var(--green);
+}
+
+/* Dimensioni */
+.green-button--small {
+  font-size: 0.8rem;
+  padding: 6px 12px;
+}
+
+.green-button--medium {
+  font-size: 1rem;
+  padding: 10px 20px;
+}
+
+.green-button--large {
+  font-size: 1.2rem;
+  padding: 14px 28px;
+}
+
+.green-button:hover:not(:disabled) {
+  background-color: var(--brown);
+}
+
+.green-button:focus-visible {
+  outline: 2px solid var(--brown);
+  outline-offset: 2px;
+}
+
+.green-button:disabled {
+  background-color: var(--brown);
+  opacity: 0.5;
+  cursor: not-allowed;
+}
