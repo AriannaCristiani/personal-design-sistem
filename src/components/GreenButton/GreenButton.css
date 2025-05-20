@@ -1,5 +1,6 @@
 .green-button {
   letter-spacing: 0.5px;
+  font-weight: 600;
   border: none;
   border-radius: var(--radius);
   cursor: pointer;
@@ -8,6 +9,11 @@
   4px 4px 12px rgba(0, 0, 0, 0.377);
   color: white;
   background-color: var(--green-6);
+
+  :where(.theme-dark) & {
+    background-color: var(--green-3);
+    color: var(--brown-8);
+  }
 }
 
 /* Dimensioni */
@@ -28,6 +34,10 @@
 
 .green-button:hover:not(:disabled) {
   background-color: var(--brown-6);
+  
+  :where(.theme-dark) & {
+    background-color: var(--brown-3);
+  }
 }
 
 .green-button:focus-visible {
@@ -39,4 +49,8 @@
   background-color: var(--brown-6);
   opacity: 0.5;
   cursor: not-allowed;
+
+    :where(.theme-dark) & {
+    background-color: var(--brown-2);
+  }
 }

@@ -45,44 +45,63 @@ const renderColorRow = (prefix: string, count: number) => (
 export const Default: Story = {
     render: () => (
         <div>
-            <style>{`
-    .container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-        gap: 0.2rem;
-        margin-bottom: var(--spacing-lg);
-    }
+     <style>{`
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 0.2rem;
+    margin-bottom: var(--spacing-lg);
+    border-bottom: 1px solid grey;
+    padding-bottom: var(--spacing-sm);
+  }
 
-    .color-swatch {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        font-size: var(--font-size-xs);
-        color: var(--text-dark);
-    }
+  .color-swatch {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: var(--font-size-xs);
+    color: var(--text-dark);
+    position: relative;
+    margin-top: var(--spacing-lg);
+  }
 
-    .label {
-        margin-bottom: 0.25rem;
-        font-weight: bold;
-    }
+  .label {
+    margin-bottom: 0.25rem;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    position: absolute;
+    top: -1.5rem;
+    left: 0;
+    padding: 2px 4px;
+    pointer-events: none;
+  }
 
-    .color-box {
-        width: 60px;
-        aspect-ratio: 1 / 1;
-        border-radius: 5px;
-        box-shadow: var(--shadow);
-    }
+  .color-swatch:hover .label,
+  .color-swatch:focus-within .label {
+    opacity: 1;
+  }
+
+  .color-box {
+    width: 60px;
+    aspect-ratio: 1 / 1;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+  }
 `}</style>
 
-
+            
             <h3>Green</h3>
             {renderColorRow("green", 9)}
-
+            
+            
             <h3>Beige</h3>
             {renderColorRow("beige", 9)}
-
+           
+            
             <h3>Brown</h3>
             {renderColorRow("brown", 9)}
+            
         </div>
     ),
 };

@@ -6,6 +6,10 @@
   overflow: hidden;
   width: 300px;
   transition: transform var(--timing-fast) ease;
+
+   :where(.theme-dark) & {
+    background-color: var(--green-6);
+  }
 }
 
 .product-card:hover {
@@ -24,6 +28,10 @@
   height: 100%;
   object-fit: cover;
   border-bottom: 2px solid var(--brown-4);
+
+  :where(.theme-dark) & {
+    border-bottom: 2px solid var(--brown-8);
+  }
 }
 
 .badge,
@@ -43,9 +51,9 @@
 }
 
 .sold-out {
-  border: 2px dotted var(--brown-1);
+  border: 2px dotted var(--beige-2);
   right: var(--spacing-sm);
-  background-color: var(--brown-6);
+  background-color: var(--beige-6);
 }
 
 .content {
@@ -56,12 +64,20 @@
   font-size: var(--font-size-h5);
   margin-bottom: var(--spacing-xs);
   color: var(--brown-8);
+
+  :where(.theme-dark) & {
+    color: var(--brown-0);
+  }
 }
 
 .price {
-  color: var(--green-7);
+  color: var(--brown-8);
   font-weight: bold;
   margin-bottom: var(--spacing-md);
+
+  :where(.theme-dark) & {
+    color: var(--green-0);
+  }
 }
 
 .button-wrapper {
