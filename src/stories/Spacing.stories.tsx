@@ -58,7 +58,7 @@ const Style: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
     </>;
 }
 
-const dimensions = ["zero", "xs", "sm", "md", "lg", "xl"] as const;
+const dimensions = ["zero", "xxxs","xxs","xs", "sm", "md", "lg", "xl","xxl","xxxl"] as const;
 
 export const Default: Story = {
     render: () => <>

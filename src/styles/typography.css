@@ -12,6 +12,15 @@ body {
     font-size: var(--font-size-hero);
 }
 
+.bold {
+  font-weight: var(--font-weight-bold);
+}
+
+.italic {
+  font-style: italic;
+}
+
+
 :where(h1, .font-size-h1) {
     font-size: var(--font-size-h1);
     margin-bottom: 0.25em;

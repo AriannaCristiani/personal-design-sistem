@@ -73,6 +73,7 @@
 .price {
   color: var(--brown-8);
   font-weight: bold;
+  font-style: italic;
   margin-bottom: var(--spacing-md);
 
   :where(.theme-dark) & {

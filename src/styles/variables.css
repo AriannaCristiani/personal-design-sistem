@@ -7,11 +7,15 @@
 
   /* Spacing */
   --spacing-zero: 0;
+  --spacing-xxxs: clamp(0px, 0px + 0.5vw, 4px);
+  --spacing-xxs: clamp(2px, 0px + 0.5vw, 4px);
   --spacing-xs: clamp(4px, 2px + 0.5vw, 8px);
   --spacing-sm: clamp(8px, 4px + 1vw, 16px);
   --spacing-md: clamp(16px, 12px + 1vw, 24px);
   --spacing-lg: clamp(24px, 20px + 1vw, 32px);
   --spacing-xl: clamp(32px, 24px + 2vw, 48px);
+  --spacing-xxl: clamp(48px, 32px + 2vw, 64px);
+  --spacing-xxxl: clamp(64px, 48px + 2vw, 80px);
 
   /* Typography */
   --font-size-hero: clamp(3.815rem, 3.573rem + 0.97vw, 4.3rem);
@@ -24,6 +28,11 @@
   --font-size-body: 1rem;
   --font-size-sm: 0.875rem;
   --font-size-xs: 0.75rem;
+
+  /* Weights */
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
 
   /* Brand colors */
 
