@@ -4,8 +4,8 @@
   border-radius: var(--radius);
   cursor: pointer;
   transition: background-color var(--timing-fast) ease;
-  box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.1), 
-  4px 4px 12px rgba(0, 0, 0, 0.678) !important;
+  box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.377), 
+  4px 4px 12px rgba(0, 0, 0, 0.377);
   color: white;
   background-color: var(--green-6);
 }

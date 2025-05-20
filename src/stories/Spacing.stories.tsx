@@ -23,7 +23,7 @@ const Style: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
         <style>{`
             dl {
                 font-size: 1rem;
-                border: 1px solid #ccc;
+                border: 1px solid grey;
                 width: 100%;
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
@@ -33,10 +33,10 @@ const Style: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
             dt {
                 font-weight: 600;
                 padding: var(--spacing-sm)  var(--spacing-md);
-                border-bottom: 1px solid #ccc;
+                border-bottom: 1px solid grey;
             }
             dd {
-                border-bottom: 1px solid #ccc;
+                border-bottom: 1px solid grey;
                 padding: var(--spacing-sm)  var(--spacing-md);
                 font-family: monospace;
                 display: grid;
@@ -47,8 +47,8 @@ const Style: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
             }
             .info {
                 background-color: var(--green-5);
-                height: 15px;
-                border-radius: 2px;
+                height: 1.5rem;
+                border-radius: 5px;
                 width: var(--story-spacing);
                 display: block;
                 margin-left: var(--spacing-md);

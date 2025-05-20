@@ -37,10 +37,12 @@
 
 .badge {
   left: var(--spacing-sm);
-  background-color: var(--green-6);
+  border: 2px dotted var(--green-1);
+  background-color: var(--green-5);
 }
 
 .sold-out {
+  border: 2px dotted var(--brown-1);
   right: var(--spacing-sm);
   background-color: var(--brown-6);
 }

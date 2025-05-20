@@ -29,40 +29,14 @@ svg {
 }
 
 
-.theme-light body {
-  --green: var(--green-6);
-  --beige: var(--beige-7);
-  --brown: var(--brown-6);
-  --text-dark: var(--brown-8);
+.theme-light {
   --text-light: white;
   --background: rgb(243, 243, 243);
-  --accent: var(--green-6);
-  --shadow: 4px 4px 8px rgba(19, 19, 19, 0.425);
 }
 
-.theme-dark body {
-  --green: var(--green-2);
-  --beige: var(--beige-4);
-  --brown: var(--brown-6);
+.theme-dark {
   --text-dark: white;
-  --text-light: black;
   --background: rgb(43, 43, 43);
-  --accent: var(--green-4);
-  --shadow: 4px 4px 12px rgba(155, 155, 155, 0.39);
-}
-
-
-/* === STORYBOOK SUPPORT === */
-.theme-light body,
-.theme-light #storybook-root {
-  background-color: var(--background);
-  color: var(--text-dark);
-}
-
-.theme-dark body,
-.theme-dark #storybook-root {
-  background-color: var(--background);
-  color: var(--text-dark);
 }
 
 .theme-light .sbdocs-preview,
