@@ -33,6 +33,8 @@ Sviluppati in **React + TypeScript**, documentati in **Storybook** e progettati 
 
 - WCAG AAA Guidelines
 
+## 📸 Screenshot
+
 ![Anteprima della Product Card su Storybook](./public/productCard.png)
 
 ![Anteprima del Green Button su Storybook](./public/button.png)
