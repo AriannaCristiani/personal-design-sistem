@@ -18,7 +18,7 @@ const meta: Meta = {
         'var(--beige-1)', 'var(--beige-2)', 'var(--beige-4)', 'var(--beige-6)', 'var(--beige-8)',
         'var(--brown-1)', 'var(--brown-2)', 'var(--brown-4)', 'var(--brown-6)', 'var(--brown-8)',
       ],
-      defaultValue: 'var(--green-6)',
+      defaultValue: 'var(--green-4)',
     },
   },
 };

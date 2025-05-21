@@ -1,4 +1,4 @@
-# ☕ Green Coffee Design System – Product Card Component
+# ☕ Green Coffee Design System
 
 Benvenuto nel progetto **Green Coffee**, un sistema di design focalizzato sull'e-commerce di un ipotetico caffè artigianale.
 

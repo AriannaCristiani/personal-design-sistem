@@ -12,7 +12,8 @@
 
   :where(.theme-dark) & {
     background-color: var(--green-3);
-    color: var(--brown-8);
+    color: var(--brown-7);
+   
   }
 }
 
