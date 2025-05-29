@@ -40,20 +40,20 @@
   top: var(--spacing-sm);
   padding: var(--spacing-xs) var(--spacing-sm);
   border-radius: var(--radius);
-  font-size: var(--font-size-xs);
+  font-size: var(--font-size-sm);
   color: white;
 }
 
 .badge {
   left: var(--spacing-sm);
-  border: 2px dotted var(--green-1);
-  background-color: var(--green-5);
+  border: 2px dotted var(--green-2);
+  background-color: var(--green-6);
 }
 
 .sold-out {
   border: 2px dotted var(--beige-2);
   right: var(--spacing-sm);
-  background-color: var(--beige-6);
+  background-color: var(--beige-7);
 }
 
 .content {
@@ -84,6 +84,17 @@
 .button-wrapper {
   display: flex;
   justify-content: flex-end;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
 }
 
 @media (max-width: 480px) {
