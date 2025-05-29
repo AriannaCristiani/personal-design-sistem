@@ -8,7 +8,13 @@ export type GreenButtonProps = {
   size?: "small" | "medium" | "large";
 };
 
-export function GreenButton({ label, disabled = false, onClick, ariaLabel, size = "medium", }: GreenButtonProps) {
+export function GreenButton({
+  label,
+  disabled = false,
+  onClick,
+  ariaLabel,
+  size = "medium",
+}: GreenButtonProps) {
   return (
     <button
       className={`green-button green-button--${size}`}

@@ -1,24 +1,36 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta = {
-  title: 'Atoms/Typography',
-  tags: ['autodocs'],
+  title: "Atoms/Typography",
+  tags: ["autodocs"],
   argTypes: {
     children: {
-      control: 'text',
-      defaultValue: 'Coffee lovers',
+      control: "text",
+      defaultValue: "Coffee lovers",
     },
     textColor: {
-      name: 'Text Color',
+      name: "Text Color",
       control: {
-        type: 'select',
+        type: "select",
       },
       options: [
-        'var(--green-1)', 'var(--green-2)', 'var(--green-4)', 'var(--green-6)', 'var(--green-8)',
-        'var(--beige-1)', 'var(--beige-2)', 'var(--beige-4)', 'var(--beige-6)', 'var(--beige-8)',
-        'var(--brown-1)', 'var(--brown-2)', 'var(--brown-4)', 'var(--brown-6)', 'var(--brown-8)',
+        "var(--green-1)",
+        "var(--green-2)",
+        "var(--green-4)",
+        "var(--green-6)",
+        "var(--green-8)",
+        "var(--beige-1)",
+        "var(--beige-2)",
+        "var(--beige-4)",
+        "var(--beige-6)",
+        "var(--beige-8)",
+        "var(--brown-1)",
+        "var(--brown-2)",
+        "var(--brown-4)",
+        "var(--brown-6)",
+        "var(--brown-8)",
       ],
-      defaultValue: 'var(--green-4)',
+      defaultValue: "var(--green-4)",
     },
   },
 };
@@ -29,8 +41,8 @@ type Story = StoryObj<{ children: string; textColor: string }>;
 
 export const Default: Story = {
   args: {
-    children: 'Coffee lovers',
-    textColor: 'var(--green-6)',
+    children: "Coffee lovers",
+    textColor: "var(--green-6)",
   },
   render: ({ children, textColor }) => (
     <>

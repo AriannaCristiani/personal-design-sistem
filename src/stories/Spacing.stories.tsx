@@ -2,8 +2,8 @@ import type { Meta, StoryObj } from "@storybook/react";
 import React from "react";
 
 const meta: Meta = {
-    title: "Atoms/Spacing",
-    tags: ["autodocs"],
+  title: "Atoms/Spacing",
+  tags: ["autodocs"],
 };
 
 export default meta;
@@ -11,16 +11,17 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const SpaceCalculation = ({ value }: { value: string }) => {
-    const spacing = React.useMemo(() => {
-        const bodyStyle = window.getComputedStyle(document.body);
-        return bodyStyle.getPropertyValue(value);
-    }, [value]);
-    return <span>{spacing}</span>;
+  const spacing = React.useMemo(() => {
+    const bodyStyle = window.getComputedStyle(document.body);
+    return bodyStyle.getPropertyValue(value);
+  }, [value]);
+  return <span>{spacing}</span>;
 };
 
 const Style: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
-    return <>
-        <style>{`
+  return (
+    <>
+      <style>{`
             dl {
                 font-size: 1rem;
                 border: 1px solid grey;
@@ -54,30 +55,48 @@ const Style: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
                 margin-left: var(--spacing-md);
          }
         `}</style>
-        {children}
-    </>;
-}
+      {children}
+    </>
+  );
+};
 
-const dimensions = ["zero", "xxxs","xxs","xs", "sm", "md", "lg", "xl","xxl","xxxl"] as const;
+const dimensions = [
+  "zero",
+  "xxxs",
+  "xxs",
+  "xs",
+  "sm",
+  "md",
+  "lg",
+  "xl",
+  "xxl",
+  "xxxl",
+] as const;
 
 export const Default: Story = {
-    render: () => <>
-
-        <Style>
-            <dl>
-                {dimensions.map((key) => (
-                    <React.Fragment key={key}>
-                        <dt>{key}</dt>
-                        <dd style={{ '--story-spacing': `var(--spacing-${key})` } as React.CSSProperties}>
-                            <span>
-                                <SpaceCalculation value={`--spacing-${key}`} />
-                            </span>
-                            <span className="info" />
-                        </dd>
-                    </React.Fragment>
-                ))}
-            </dl>
-        </Style>
-    </>,
-}
-
+  render: () => (
+    <>
+      <Style>
+        <dl>
+          {dimensions.map((key) => (
+            <React.Fragment key={key}>
+              <dt>{key}</dt>
+              <dd
+                style={
+                  {
+                    "--story-spacing": `var(--spacing-${key})`,
+                  } as React.CSSProperties
+                }
+              >
+                <span>
+                  <SpaceCalculation value={`--spacing-${key}`} />
+                </span>
+                <span className="info" />
+              </dd>
+            </React.Fragment>
+          ))}
+        </dl>
+      </Style>
+    </>
+  ),
+};

@@ -17,7 +17,8 @@ const meta: Meta<typeof ProductCard> = {
   parameters: {
     docs: {
       description: {
-        component: "ProductCard è un componente UI compsto da: immagine, prezzo, badge con percentuale di sconto e bottone per aggiungere al carrello, questo può variare in base alla disponibilità dell'articolo.",
+        component:
+          "ProductCard è un componente UI compsto da: immagine, prezzo, badge con percentuale di sconto e bottone per aggiungere al carrello, questo può variare in base alla disponibilità dell'articolo.",
       },
     },
     layout: "centered",

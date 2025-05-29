@@ -18,7 +18,8 @@ const meta: Meta<typeof GreenButton> = {
   parameters: {
     docs: {
       description: {
-        component: "GreenButton è un componente UI che supporta gli stati `hover`, `focus`, `disabled`, è accessibile via `aria-label`, e può essere riutilizzato nel design system.",
+        component:
+          "GreenButton è un componente UI che supporta gli stati `hover`, `focus`, `disabled`, è accessibile via `aria-label`, e può essere riutilizzato nel design system.",
       },
     },
     layout: "centered",
@@ -32,7 +33,7 @@ export const Default: Story = {
   args: {
     label: "Button",
     ariaLabel: "Button",
-    onClick: () => alert("✅ Hai cliccato il bottone!")
+    onClick: () => alert("✅ Hai cliccato il bottone!"),
   },
 };
 
@@ -67,4 +68,3 @@ export const Large: Story = {
     onClick: () => alert("✅ Hai cliccato il bottone!"),
   },
 };
-

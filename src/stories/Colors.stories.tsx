@@ -1,9 +1,9 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import type { ButtonHTMLAttributes } from 'react';
+import type { Meta, StoryObj } from "@storybook/react";
+import type { ButtonHTMLAttributes } from "react";
 
 const meta: Meta = {
-    title: 'Atoms/Colors',
-    tags: ['autodocs'],
+  title: "Atoms/Colors",
+  tags: ["autodocs"],
 };
 
 export default meta;
@@ -11,41 +11,41 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const ClickToCopy: React.FC<
-    { value: string } & ButtonHTMLAttributes<HTMLButtonElement>
+  { value: string } & ButtonHTMLAttributes<HTMLButtonElement>
 > = ({ value, ...attrs }) => {
-    return (
-        <button
-            className="click-to-copy"
-            {...attrs}
-            style={{ border: "none", cursor: "pointer", ...attrs.style }}
-            onClick={() => navigator.clipboard.writeText(value)}
-            aria-label={`Copy ${value}`}
-        />
-    );
+  return (
+    <button
+      className="click-to-copy"
+      {...attrs}
+      style={{ border: "none", cursor: "pointer", ...attrs.style }}
+      onClick={() => navigator.clipboard.writeText(value)}
+      aria-label={`Copy ${value}`}
+    />
+  );
 };
 
 const renderColorRow = (prefix: string, count: number) => (
-    <div className="container">
-        {Array.from({ length: count }).map((_, index) => {
-            const varName = `--${prefix}-${index}`;
-            return (
-                <div key={index} className="color-swatch">
-                    <div className="label">{varName}:</div>
-                    <ClickToCopy
-                        className="color-box"
-                        style={{ backgroundColor: `var(${varName})` }}
-                        value={`var(${varName})`}
-                    />
-                </div>
-            );
-        })}
-    </div>
+  <div className="container">
+    {Array.from({ length: count }).map((_, index) => {
+      const varName = `--${prefix}-${index}`;
+      return (
+        <div key={index} className="color-swatch">
+          <div className="label">{varName}:</div>
+          <ClickToCopy
+            className="color-box"
+            style={{ backgroundColor: `var(${varName})` }}
+            value={`var(${varName})`}
+          />
+        </div>
+      );
+    })}
+  </div>
 );
 
 export const Default: Story = {
-    render: () => (
-        <div>
-     <style>{`
+  render: () => (
+    <div>
+      <style>{`
   .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -90,18 +90,14 @@ export const Default: Story = {
   }
 `}</style>
 
-            
-            <h3>Green</h3>
-            {renderColorRow("green", 9)}
-            
-            
-            <h3>Beige</h3>
-            {renderColorRow("beige", 9)}
-           
-            
-            <h3>Brown</h3>
-            {renderColorRow("brown", 9)}
-            
-        </div>
-    ),
+      <h3>Green</h3>
+      {renderColorRow("green", 9)}
+
+      <h3>Beige</h3>
+      {renderColorRow("beige", 9)}
+
+      <h3>Brown</h3>
+      {renderColorRow("brown", 9)}
+    </div>
+  ),
 };
